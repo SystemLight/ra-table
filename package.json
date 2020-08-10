@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --mode production",
+    "build:ts": "tsc --build tsconfig.json",
     "test": "echo \"no test\" && exit 0",
     "watch": "webpack --watch"
   },

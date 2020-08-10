@@ -86,4 +86,4 @@ function App() {
 }
 ```
 
-![NPM version](show.png)
+![SHOW](./show.png)
