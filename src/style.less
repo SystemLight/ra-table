@@ -1,0 +1,66 @@
+.edit-table-dropdown {
+  user-select: none;
+}
+
+.edit-table-wrap {
+  .edit-table {
+
+    .ant-table-small .ant-table-selection-column {
+      width: 35px;
+      min-width: 35px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .ant-table-thead {
+      th {
+        background-color: #E0E3DA;
+      }
+
+      .ant-checkbox-wrapper {
+        margin-right: 5px;
+      }
+
+      .react-resizable-handle {
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        bottom: 0;
+        right: -5px;
+        cursor: col-resize;
+        z-index: 1;
+        background-image: none;
+
+        &.active::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 0;
+          bottom: 0;
+          border-left: solid 1px black;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      tr.ant-table-row:hover {
+        td {
+          background-color: #FBFFB9;
+          cursor: no-drop;
+        }
+      }
+
+      tr.even {
+        td {
+          background-color: #D8E6E7;
+        }
+      }
+
+      tr.odd {
+        td {
+          background-color: #9DC3C1;
+        }
+      }
+    }
+  }
+}

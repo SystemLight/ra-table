@@ -1,0 +1,31 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "target": "esNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "module": "esNext",
+    "resolveJsonModule": false,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "noEmit": false,
+    "outDir": "./dist/",
+    "declaration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  }
+}
