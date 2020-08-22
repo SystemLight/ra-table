@@ -5,13 +5,14 @@
 ## 安装
 
 ```
-npm install ra-antd-table
+npm install ra-antd-table react antd @ant-design/icons js-export-excel
 ```
 
-## 使用示例
+## 使用示例【TS版本】
 
 ```
 import React, {useState} from 'react';
+import "antd/dist/antd.min.css";
 import EditTable from "ra-antd-table";
 import {IColumnsType} from "ra-antd-table/dist/interface";
 
