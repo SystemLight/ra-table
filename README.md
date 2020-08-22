@@ -11,7 +11,9 @@ npm install ra-antd-table
 ## 使用示例
 
 ```
+import React, {useState} from 'react';
 import EditTable from "ra-antd-table";
+import {IColumnsType} from "ra-antd-table/dist/interface";
 
 const columns = [
     {
@@ -60,11 +62,11 @@ const data = [
 ];
 
 function App() {
-    const [colState, setColState] = useState(columns);
+    const [colState, setColState] = useState<IColumnsType<any>>(columns);
     return (
         <>
             <div className={"s-wrap"} style={{paddingTop: 15}}>
-                <EditTable
+                <EditTable<any>
                     columns={colState}
                     data={data} title={"表格标题"}
                     onResize={(e, {size}, i) => {
@@ -84,4 +86,6 @@ function App() {
         </>
     );
 }
+
+export default App;
 ```
