@@ -1,6 +1,6 @@
 {
   "name": "ra-antd-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Customizable editable table component based on React and antd-table",
   "main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
