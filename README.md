@@ -85,5 +85,3 @@ function App() {
     );
 }
 ```
-
-![SHOW](./show.png)

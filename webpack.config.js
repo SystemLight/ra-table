@@ -14,7 +14,8 @@ module.exports = (env, argv) => {
             extensions: [".js", ".ts", ".jsx", ".tsx"]
         },
         entry: {
-            "index": "./src/index.tsx"
+            "index": "./src/index.tsx",
+            "formItem": "./src/formItem.tsx"
         },
         output: {
             filename: "[name].umd.js",
