@@ -5,7 +5,8 @@
 ## 安装
 
 ```
-npm install ra-antd-table react antd @ant-design/icons js-export-excel
+npm install ra-antd-table react antd @ant-design/icons react-resizable js-export-excel
+npm i @types/react-resizable --save-dev
 ```
 
 ## 使用示例【TS版本】
