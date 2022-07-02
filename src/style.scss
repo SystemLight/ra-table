@@ -1,0 +1,149 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption,
+article, aside, canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  font-weight: bold;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.app {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@import "antd/dist/antd.min.css";
+
+.edit-table-dropdown {
+  user-select: none;
+}
+
+.edit-table-wrap {
+  .edit-table {
+    .ant-table-small .ant-table-selection-column {
+      width: 35px;
+      min-width: 35px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .ant-table-thead {
+      th {
+        background-color: #E0E3DA;
+      }
+
+      .ant-checkbox-wrapper {
+        margin-right: 5px;
+      }
+
+      .react-resizable-handle {
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        bottom: 0;
+        right: -5px;
+        cursor: col-resize;
+        z-index: 1;
+        background-image: none;
+
+        &.active::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 0;
+          bottom: 0;
+          border-left: solid 1px black;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      .cell-value-wrap {
+        cursor: pointer;
+        position: relative;
+        padding-right: 24px;
+
+        &:hover {
+          border: 1px solid #999999;
+        }
+      }
+
+      tr.ant-table-row:hover {
+        td {
+          background-color: #FBFFB9;
+          cursor: no-drop;
+        }
+      }
+
+      tr.even {
+        td {
+          background-color: #D8E6E7;
+        }
+      }
+
+      tr.odd {
+        td {
+          background-color: #9DC3C1;
+        }
+      }
+    }
+
+    .editable-cell {
+      position: relative;
+    }
+
+    .editable-cell-value-wrap {
+      padding: 5px 12px;
+      cursor: pointer;
+    }
+
+    .editable-row:hover .editable-cell-value-wrap {
+      padding: 4px 11px;
+      border: 1px solid #D9D9D9;
+      border-radius: 2px;
+    }
+
+    [data-theme="dark"] .editable-row:hover .editable-cell-value-wrap {
+      border: 1px solid #434343;
+    }
+  }
+}

@@ -1,15 +1,17 @@
 # ra-antd-table
 
-基于react antd进行拓展的表格组件
+[![NPM version](https://img.shields.io/npm/v/ra-antd-table.svg)](https://www.npmjs.com/package/ra-antd-table)
 
-## 安装
+> 基于react antd进行拓展的表格组件
+
+### 安装
 
 ```
 npm install ra-antd-table react antd @ant-design/icons react-resizable js-export-excel
 npm i @types/react-resizable --save-dev
 ```
 
-## 使用示例【TS版本】
+### 使用示例【TS版本】
 
 ```
 import React, {useState} from 'react';

@@ -1,32 +1,41 @@
 module.exports = function (api) {
-    api.cache(true);
+  api.assertVersion('^7.15')
+  api.cache(true)
 
-    const presets = [
-        [
-            "@babel/env",
-            {
-                targets: {
-                    node: "8",
-                    ie: "10",
-                    edge: "17",
-                    firefox: "60",
-                    chrome: "67",
-                    safari: "11.1",
-                },
-                useBuiltIns: "usage",
-                modules: false,
-                corejs: {
-                    "version": 3,
-                    "proposals": true,
-                }
-            },
-        ],
-        "@babel/react"
-    ];
-    const plugins = [];
+  let corejs = {
+    version: 3,
+    proposals: true
+  }
 
-    return {
-        presets,
-        plugins
-    };
-};
+  /**
+   * 配置项：https://babel.docschina.org/docs/en/options/
+   *
+   * 先执行完所有 Plugin，再执行 Preset。
+   * 多个 Plugin，按照声明次序顺序执行。
+   * 多个 Preset，按照声明次序逆序执行。
+   */
+  return {
+    comments: true,
+    presets: [
+      [
+        '@babel/env',
+        {
+          debug: false,
+          modules: false,
+          useBuiltIns: 'usage',
+          ignoreBrowserslistConfig: false,
+          corejs: corejs
+        }
+      ],
+      '@babel/react'
+    ],
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          corejs: corejs
+        }
+      ]
+    ]
+  }
+}
